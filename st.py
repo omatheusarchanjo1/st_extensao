@@ -111,7 +111,7 @@ def Graficos():
     df_melted = pd.melt(df_location, id_vars=id_vars, value_vars=value_vars, var_name='Cidade', value_name='Quantidade')
 
     # Then, create the stacked bar chart
-    fig_stacked_bar = px.bar(df_melted, x="Cidade", y="Quantidade", color="categoria",
+    fig_stacked_bar = px.bar(df_melted, x="Quantidade", y="Cidade", color="categoria",
                              title="Quantidade de Resíduos por Cidade e Categoria",
                              labels={"Quantidade": "Quantidade de Resíduos"},
                              )
