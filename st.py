@@ -113,7 +113,7 @@ def Graficos():
     # Then, create the stacked bar chart
     fig_stacked_bar = px.bar(df_melted, x="Quantidade", y="Cidade", color="categoria",
                              title="Quantidade de Resíduos por Cidade e Categoria",
-                             labels={"Quantidade": "Quantidade de Resíduos"},
+                             labels={"Quantidade": "Quantidade de Resíduos"},orientation='h',
                              )
     st.plotly_chart(fig_stacked_bar, use_container_width=True)
 
